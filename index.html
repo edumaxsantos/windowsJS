@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="windows.js"></script>
+</head>
+
+<body>
+    <button onclick="new Windows({x: 150,
+        y: 150,
+        width: 300,
+        height: 200,
+        bgColor: 'red'}); document.getElementById('counter').innerHTML = Windows.counter;">Click to add a window</button>
+    <p id="counter"></p>
+    <script>
+        window.onload = function() {
+    Windows.counter = 0;
+    let w = new Windows({
+        x: 150,
+        y: 150,
+        width: 300,
+        height: 200,
+        bgColor: 'red',
+        title: 'First window'
+    });
+    let y = new Windows({
+        x: 200,
+        y: 150,
+        width: 200,
+        height: 150,
+        bgColor: 'blue',
+        title: 'Second window'
+    });
+
+    let z = new Windows({
+        x: 300,
+        y: 200,
+        width: 300,
+        height: 300,
+        bgColor: 'green',
+        title: 'Third window'
+    });
+}
+    </script>
+</body>
+
+</html>

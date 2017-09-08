@@ -1,0 +1,90 @@
+div.header {
+  /*cursor: -webkit-grab;*/
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+div.headerClick {
+  cursor: -webkit-grabbing;
+}
+
+div.maxSize {
+  background-color:cyan !important;
+}
+
+div.maxSize:hover {
+  background-color: darkcyan !important;
+}
+
+div.minSize {
+  background-color:cyan !important;
+}
+
+div.minSize:hover {
+  background-color: darkcyan !important;
+}
+
+div.resizeX {
+  cursor: e-resize;
+}
+
+div.resizeY {
+  cursor: s-resize;
+}
+
+* {
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.window, div.header, div {
+  box-sizing: border-box;
+}
+
+div.titleWindow p::before {
+  content: '\00a0';
+}
+
+div.titleWindow {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+div.controlButtons {
+  display: inline-block;
+  display: flex;
+  background-color: white;
+  cursor: auto;
+}
+
+div.winButtons {
+  width: 20px;
+  height: 20px;
+  margin-right: 1px;
+  background: orange;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+div.winButtons p {
+  text-align: center;
+}
+
+div.winButtons:hover {
+  background: white;
+  cursor: auto;
+}
+
+div.winButtons p.exitB::after {
+  content: '\00d7';
+}
+
+div.winButtons p.minB::after {
+  content: '\2013';
+}
+
+div.winButtons p.maxB::after {
+  content: '\25a1';
+}
